@@ -28,7 +28,7 @@ namespace dotnet_rpg.Services.WeaponService
 
         public async Task<ServiceResponse<GetCharacterDto>> AddWeapon(AddWeaponDto newWeapon)
         {
-            var serviceResponse = new ServiceResponse<GetCharacterDto>();
+            var response = new ServiceResponse<GetCharacterDto>();
 
             try
             {
@@ -36,8 +36,8 @@ namespace dotnet_rpg.Services.WeaponService
 
                 if (character == null)
                 {
-                    serviceResponse.Success = false;
-                    serviceResponse.Message = "Character not found.";
+                    response.Success = false;
+                    response.Message = "Character not found.";
                 }
                 else
                 {
@@ -51,16 +51,16 @@ namespace dotnet_rpg.Services.WeaponService
                     await _context.Weapons.AddAsync(weapon);
                     await _context.SaveChangesAsync();
 
-                    serviceResponse.Data = _mapper.Map<GetCharacterDto>(character);
+                    response.Data = _mapper.Map<GetCharacterDto>(character);
                 }
             }
             catch (Exception ex)
             {
-                serviceResponse.Success = false;
-                serviceResponse.Message = ex.Message;
+                response.Success = false;
+                response.Message = ex.Message;
             }
 
-            return serviceResponse;
+            return response;
         }
     }
 }
