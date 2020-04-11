@@ -2,6 +2,7 @@ using AutoMapper;
 using dotnet_rpg.Data;
 using dotnet_rpg.Services.CharacterService;
 using dotnet_rpg.Services.CharacterSkillService;
+using dotnet_rpg.Services.FightService;
 using dotnet_rpg.Services.WeaponService;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
@@ -35,6 +36,7 @@ namespace dotnet_rpg
             services.AddScoped<IAuthRepository, AuthRepository>();
             services.AddScoped<IWeaponService, WeaponService>();
             services.AddScoped<ICharacterSkillService, CharacterSkillService>();
+            services.AddScoped<IFightService, FightService>();
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                     .AddJwtBearer(options =>
                     {
