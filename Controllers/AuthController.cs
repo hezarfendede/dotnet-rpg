@@ -1,8 +1,8 @@
+using System.Threading.Tasks;
 using dotnet_rpg.Data;
 using dotnet_rpg.Dtos.Auth;
 using dotnet_rpg.Models;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
 
 namespace dotnet_rpg.Controllers
 {
@@ -20,7 +20,7 @@ namespace dotnet_rpg.Controllers
         [HttpPost("Register")]
         public async Task<IActionResult> Register(RegisterUserDto request)
         {
-            ServiceResponse<int> response = await _authRepository.Register(new Models.User { UserName = request.UserName }, request.Password);
+            ServiceResponse<int> response = await _authRepository.Register(new User { UserName = request.UserName }, request.Password);
 
             if (!response.Success)
             {

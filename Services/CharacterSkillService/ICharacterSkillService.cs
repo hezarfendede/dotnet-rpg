@@ -1,7 +1,7 @@
-﻿using dotnet_rpg.Dtos.Character;
+﻿using System.Threading.Tasks;
+using dotnet_rpg.Dtos.Character;
 using dotnet_rpg.Dtos.CharacterSkill;
 using dotnet_rpg.Models;
-using System.Threading.Tasks;
 
 namespace dotnet_rpg.Services.CharacterSkillService
 {

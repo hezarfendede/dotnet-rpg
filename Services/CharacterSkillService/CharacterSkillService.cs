@@ -1,13 +1,13 @@
-﻿using AutoMapper;
+﻿using System;
+using System.Security.Claims;
+using System.Threading.Tasks;
+using AutoMapper;
 using dotnet_rpg.Data;
 using dotnet_rpg.Dtos.Character;
 using dotnet_rpg.Dtos.CharacterSkill;
 using dotnet_rpg.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Security.Claims;
-using System.Threading.Tasks;
 
 namespace dotnet_rpg.Services.CharacterSkillService
 {

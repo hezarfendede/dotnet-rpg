@@ -1,7 +1,7 @@
+using System.Collections.Generic;
 using dotnet_rpg.Dtos.Skill;
 using dotnet_rpg.Dtos.Weapon;
 using dotnet_rpg.Models;
-using System.Collections.Generic;
 
 namespace dotnet_rpg.Dtos.Character
 {

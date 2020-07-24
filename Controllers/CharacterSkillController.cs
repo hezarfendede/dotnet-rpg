@@ -1,8 +1,8 @@
-﻿using dotnet_rpg.Dtos.CharacterSkill;
+﻿using System.Threading.Tasks;
+using dotnet_rpg.Dtos.CharacterSkill;
 using dotnet_rpg.Services.CharacterSkillService;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
 
 namespace dotnet_rpg.Controllers
 {

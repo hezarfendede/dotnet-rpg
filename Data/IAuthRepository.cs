@@ -1,5 +1,5 @@
-using dotnet_rpg.Models;
 using System.Threading.Tasks;
+using dotnet_rpg.Models;
 
 namespace dotnet_rpg.Data
 {
